@@ -6,6 +6,9 @@
 h1 {
     font-size: 20px;
 }
+h3 {
+    font-size:14px;
+}
 h4 {
     font-size: 15px;
 }
@@ -21,6 +24,9 @@ h4 {
 }
 h1 {
     font-size: 25px;
+}
+h3 {
+    font-size:22px;
 }
 h4 {
     font-size: 20px;
@@ -54,6 +60,9 @@ h4 {
 h1 {
     font-size: 35px;
 }
+h3 {
+    font-size:27px;
+}
 h4 {
     font-size: 25px;
 }
@@ -65,18 +74,8 @@ h4 {
 .container-fluid .first-block {
     /*background-image: url("src/img/bglg.jpg");*/
     /*background-size: 100%;*/
+    color: white;
 }
-
-
-
-.first-block .row {
-    min-height: 100px;
-}
-
-.bg {
-    background: rgba(0,0,0,0.2);
-}
-
 .btn {
     color: white;
     margin: 0 auto;
@@ -84,10 +83,45 @@ h4 {
     font-size: 25px;
 }
 
+.p {
+    margin-top: 70px;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.full-description {
+    background-image: url("src/img/road.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.col-sm-4 {
+    padding: 15px;
+    margin-bottom: 50px;
+}
+
+img {
+    margin: 30px auto;
+    width: 75%;
+    display: block;
+}
+
+.row {
+    min-height: 100px;
+}
+
+.bg {
+    background: rgba(0,0,0,0.3);
+}
+
+
+
 
 .container-fluid {
     padding-left: 0;
     padding-right: 0;
     overflow: hidden;
-    color: white;
+    
 }
