@@ -1,0 +1,93 @@
+@media (min-width: 240px) and (max-width: 800px) {
+.container-fluid .first-block {
+    background-image: url("src/img/bgm.jpg");
+    /*background-size: 100%;*/
+}
+h1 {
+    font-size: 20px;
+}
+h4 {
+    font-size: 15px;
+}
+.container-fluid {
+    font-size: 13px;
+}
+}
+
+@media (min-width: 801px) and (max-width: 1499px) {
+.container-fluid .first-block {
+    background-image: url("src/img/bglg.jpg");
+    background-size: 100%;
+}
+h1 {
+    font-size: 25px;
+}
+h4 {
+    font-size: 20px;
+}
+.container-fluid {
+    font-size: 15px;
+}
+}
+
+/*@media (max-width: 1500px){
+.container-fluid .first-block {
+    background-image: url("src/img/bglg.jpg");
+    background-size: 100%;
+}
+h1 {
+    font-size: 25px;
+}
+h4 {
+    font-size: 20px;
+}
+.container-fluid {
+    font-size: 15px;
+}
+}*/
+
+@media (min-width: 1500px) {
+.container-fluid .first-block {
+    background-image: url("src/img/bglg.jpg");
+    background-size: 100%;
+}
+h1 {
+    font-size: 35px;
+}
+h4 {
+    font-size: 25px;
+}
+.container-fluid {
+    font-size: 15px;
+}
+}
+
+.container-fluid .first-block {
+    /*background-image: url("src/img/bglg.jpg");*/
+    /*background-size: 100%;*/
+}
+
+
+
+.first-block .row {
+    min-height: 100px;
+}
+
+.bg {
+    background: rgba(0,0,0,0.2);
+}
+
+.btn {
+    color: white;
+    margin: 0 auto;
+    display: block;
+    font-size: 25px;
+}
+
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+    color: white;
+}
