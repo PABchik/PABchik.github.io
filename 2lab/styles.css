@@ -78,9 +78,9 @@ h4 {
 }
 .btn {
     color: white;
-    margin: 0 auto;
+    margin: 15px auto;
     display: block;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .p {
@@ -112,6 +112,14 @@ img {
     min-height: 100px;
 }
 
+input, textarea{
+    display: block;
+    margin: 0 auto -50px;
+}
+
+form .row {
+    min-height: 50px;
+}
 .bg {
     background: rgba(0,0,0,0.3);
 }
