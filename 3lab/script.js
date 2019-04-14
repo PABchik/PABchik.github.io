@@ -59,7 +59,7 @@ function addMask() {
 function addQuote() {
     ctx.fillStyle = "rgb(114,115,115)";
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=json&lang=ru", false);
+    xhr.open("GET", "https://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=json&lang=ru", false);
     xhr.onload = function () {
         console.log(xhr.responseText);
     };
