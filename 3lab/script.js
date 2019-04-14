@@ -64,10 +64,34 @@ function addQuote() {
         console.log(xhr.responseText);
     };
     xhr.send();
-    response = JSON.parse(xhr.responseText);
-    alert(response[0].quote);
-    ctx.font = "italic 30pt Arial"
-    ctx.fillText(response[0].quote, 0, 400);
+    var response = JSON.parse(xhr.responseText);
+
+    console.log(response[0].quote);
+    var quote = response[0].quote;
+    // alert(quote);
+    var mas = quote.split(' ');
+
+    ctx.font = "italic 30pt Arial";
+    console.log(mas);
+    var wordsInLineCount = Math.floor(collageX / 100 - 3);
+
+    console.log("wordlineCount: " + wordsInLineCount);
+    // ctx.textAlign = "center";
+    for (var i = 0; i < mas.length; i = i + wordsInLineCount) {
+        var str = "";
+        for (var j = i; j < i + wordsInLineCount; j++) {
+            if (j < mas.length)
+                str += mas[j] + " ";
+            console.log("inner iteration i:" + i + "j: " + j );
+        }
+        console.log("str = " + str);
+        ctx.fillText(str, 50, 150 + i * 10);
+    }
+    ctx.fillText(response[0].character, collageX * 0.5, collageY * 0.8);
+
+}
+
+function quoteWrap(qoute) {
 
 
 }
