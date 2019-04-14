@@ -39,6 +39,9 @@ img1.onload = function() {
                 console.log("img4:   width: " + img4.width + ", height: " + img4.height);
                 addMask();
                 addQuote();
+
+
+
             }
         }
     }
@@ -48,7 +51,15 @@ img1.onload = function() {
 
 
 
+
+
+var a = document.createElement('a');
+a.href = canvas.toDataURL();
+a.download = "generated_collage.png"
+a.innerHTML = "Download collage"
+a.style = "padding: 15px; margin-top:" + (100 + collageY) + "px;font-size: 20px;color:grey; text-decoration:none;";
 document.body.appendChild(canvas);
+document.body.appendChild(a);
 
 
 function addMask() {
@@ -87,9 +98,10 @@ function addQuote() {
         console.log("str = " + str);
         ctx.fillText(str, 50, 150 + i * 10);
     }
-    ctx.fillText(response[0].character, collageX * 0.5, collageY * 0.8);
+    ctx.fillText(response[0].character, collageX * 0.4, collageY * 0.8);
 
 }
+
 
 function quoteWrap(qoute) {
 
