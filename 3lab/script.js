@@ -1,9 +1,4 @@
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "https://source.unsplash.com/collection/1127163/", false);
-xhr.onload = function () {
-    console.log(xhr.responseText);
-};
-xhr.send();
+
 
 
 
@@ -42,6 +37,8 @@ img1.onload = function() {
                 console.log("img2:   width: " + img2.width + ", height: " + img2.height);
                 console.log("img3:   width: " + img3.width + ", height: " + img3.height);
                 console.log("img4:   width: " + img4.width + ", height: " + img4.height);
+                addMask();
+                addQuote();
             }
         }
     }
@@ -49,9 +46,28 @@ img1.onload = function() {
 
 
 
+
+
 document.body.appendChild(canvas);
 
 
+function addMask() {
+    ctx.fillStyle = "rgba(0, 0, 0, 0.35)";
+    ctx.fillRect(0, 0, collageX, collageY);
+}
+
+function addQuote() {
+    ctx.fillStyle = "rgb(114,115,115)";
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=json&lang=ru", false);
+    xhr.onload = function () {
+        console.log(xhr.responseText);
+    };
+    xhr.send();
+    alert(JSON.parse(xhr.responseText).quoteText);
+
+
+}
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
