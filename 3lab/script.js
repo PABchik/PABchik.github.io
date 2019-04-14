@@ -57,14 +57,17 @@ function addMask() {
 }
 
 function addQuote() {
-    ctx.fillStyle = "rgb(114,115,115)";
+    ctx.fillStyle = "rgb(255, 255, 255)";
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=json&lang=ru", false);
+    xhr.open("GET", "https://thesimpsonsquoteapi.glitch.me/quotes", false);
     xhr.onload = function () {
         console.log(xhr.responseText);
     };
     xhr.send();
-    alert(JSON.parse(xhr.responseText).quoteText);
+    response = JSON.parse(xhr.responseText);
+    alert(response[0].quote);
+    ctx.font = "italic 30pt Arial"
+    ctx.fillText(response[0].quote, 0, 400);
 
 
 }
