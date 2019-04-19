@@ -19,6 +19,10 @@ var img1 = new Image();
 var img2 = new Image();
 var img3 = new Image();
 var img4 = new Image();
+img1.crossOrigin = "anonymous";
+img2.crossOrigin = "anonymous";
+img3.crossOrigin = "anonymous";
+img4.crossOrigin = "anonymous";
 
 
 img1.src = imgSource + getRandomInt(collageX * 0.33, collageX * 0.5) + "x" + getRandomInt(collageY * 0.33, collageY * 0.5);
@@ -39,7 +43,7 @@ img1.onload = function() {
                 console.log("img4:   width: " + img4.width + ", height: " + img4.height);
                 addMask();
                 addQuote();
-
+				addDownloadBtn(); 
 
 
             }
@@ -53,13 +57,17 @@ img1.onload = function() {
 
 
 
-var a = document.createElement('a');
-a.href = canvas.toDataURL();
-a.download = "generated_collage.png"
-a.innerHTML = "Download collage"
-a.style = "padding: 15px; margin-top:" + (100 + collageY) + "px;font-size: 20px;color:grey; text-decoration:none;";
+
 document.body.appendChild(canvas);
-document.body.appendChild(a);
+
+function addDownloadBtn() {
+	var a = document.createElement('a');
+	a.href = canvas.toDataURL("image/jpeg");
+	a.download = "generated_collage.jpg"
+	a.innerHTML = "Download collage"
+	a.style = "padding: 15px; margin-top:" + (100 + collageY) + "px;font-size: 20px;color:grey; text-decoration:none;";
+	document.body.appendChild(a);
+}
 
 
 function addMask() {
